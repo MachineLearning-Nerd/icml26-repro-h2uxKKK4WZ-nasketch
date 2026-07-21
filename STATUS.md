@@ -11,9 +11,10 @@ Current step: clean-room implementation and source pinning.
 ## Local publication gate
 
 `repro/src/gate.py` passes all six anchored claims and the independent unit
-suite has four passing tests. The public GitHub handoff is at commit
-`1a605cc504eafdd44aa25f6b034c549d601dfbfa`; canonical queue handoff is the
-next action. The source-level experimental mismatch remains disclosed in the
+suite has four passing tests. The public GitHub handoff was pushed before the
+canonical locked enqueue, which recorded this paper as backlog entry 75. The
+shared drain exclusively owns Hugging Face Space publication and public
+readback. The source-level experimental mismatch remains disclosed in the
 evidence ledger and is not represented as a successful Table/Figure rerun.
 
 FULL_GATE_READY: h2uxKKK4WZ
