@@ -1,0 +1,115 @@
+{
+  "normality": {
+    "dimension": 6,
+    "independent_last_iterates": 2400,
+    "horizon": 4000,
+    "stepsize": "1/(t+1)",
+    "innovation": "centered exponential",
+    "K_diagonal": [
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2,
+      0.25,
+      0.3
+    ],
+    "relative_covariance_error": 0.07312073623430071,
+    "lyapunov_residual": 5.551115123125783e-17,
+    "minimum_qq_r2": 0.997658284850011,
+    "maximum_abs_skew": 0.08847347303482335,
+    "maximum_abs_excess_kurtosis": 0.16960531774584942
+  },
+  "online_covariance": {
+    "dimension": 3,
+    "independent_streams": 500,
+    "maximum_horizon": 24000,
+    "stepsize": ".8/t^.75",
+    "checkpoints": [
+      {
+        "horizon": 1500,
+        "mean_frobenius_error": 0.3925508618102948,
+        "mean_estimate_relative_error": 0.09811173739484638,
+        "theory_rate_proxy": 0.44817084324637063
+      },
+      {
+        "horizon": 3000,
+        "mean_frobenius_error": 0.36531335331127524,
+        "mean_estimate_relative_error": 0.10010840700882244,
+        "theory_rate_proxy": 0.41097447530336884
+      },
+      {
+        "horizon": 6000,
+        "mean_frobenius_error": 0.341923978505284,
+        "mean_estimate_relative_error": 0.09669492876405124,
+        "theory_rate_proxy": 0.3768652555071075
+      },
+      {
+        "horizon": 12000,
+        "mean_frobenius_error": 0.3193088916007353,
+        "mean_estimate_relative_error": 0.06051415683570453,
+        "theory_rate_proxy": 0.34558696304337905
+      },
+      {
+        "horizon": 24000,
+        "mean_frobenius_error": 0.3067180353199054,
+        "mean_estimate_relative_error": 0.0353443555029353,
+        "theory_rate_proxy": 0.31690464238960186
+      }
+    ],
+    "fitted_error_slope": -0.0906114945109318,
+    "theory_rate_slope": -0.125,
+    "online_state": "sum(x), sum(x/phi), sum(xx^T/phi), sum(1/phi)"
+  },
+  "global_convergence": {
+    "objective": ".5 sum base_i*x_i^2 + .2 sum log(cosh(x_i))",
+    "dimension": 4,
+    "sketch": "uniform coordinate",
+    "mu": 0.25,
+    "nu": 4.0,
+    "gamma": 1.0,
+    "tau": 24,
+    "tau_condition_lhs": 0.04281136117560891,
+    "tau_condition_rhs": 0.078125,
+    "tau_condition_satisfied": true,
+    "trajectories": 36,
+    "horizon": 4000,
+    "rows": [
+      {
+        "initial_radius": 1.0,
+        "mean_distance_by_checkpoint": [
+          1.0,
+          0.014949309495041955,
+          0.004480946828548337,
+          0.0021086694944178227,
+          0.001055168798273788,
+          0.0006275461146500293
+        ],
+        "maximum_final_over_initial": 0.0010536085542680038
+      },
+      {
+        "initial_radius": 10.0,
+        "mean_distance_by_checkpoint": [
+          10.0,
+          0.11479370579194108,
+          0.006602335689179869,
+          0.0019814644517625207,
+          0.0008661156718883775,
+          0.0006284157754336111
+        ],
+        "maximum_final_over_initial": 0.00013772788108703062
+      },
+      {
+        "initial_radius": 100.0,
+        "mean_distance_by_checkpoint": [
+          100.0,
+          1.2952437118098274,
+          0.06401293017424985,
+          0.002382770574161416,
+          0.0010547448349919424,
+          0.0007170561741565986
+        ],
+        "maximum_final_over_initial": 1.5133025170115735e-05
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "claims": {
+    "C1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "C5": true,
+    "C6": true
+  },
+  "all_six_checked": true,
+  "scope": "clean-room theorem instances; source d=20 table protocol remains unreproduced because its parameter approximation is not released",
+  "source_protocol_pilot": "failed and retained in outputs/pilot.json"
+}

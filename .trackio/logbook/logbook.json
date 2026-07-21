@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "title": "Repro - Inference of Online Newton Methods with Nesterov's Accelerated Sketching",
+  "emoji": "🎯",
+  "space_id": "DineshAI/h2uxKKK4WZ",
+  "paper": {
+    "openreview_id": "h2uxKKK4WZ",
+    "arxiv_id": "2604.23436",
+    "title": "Inference of Online Newton Methods with Nesterov's Accelerated Sketching"
+  },
+  "tags": [
+    "icml2026-repro",
+    "paper-h2uxKKK4WZ"
+  ],
+  "updated_at": "2026-07-21T03:47:35+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Repro - Inference of Online Newton Methods with Nesterov's Accelerated Sketching",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "claim-1",
+        "title": "Claim 1",
+        "file": "pages/claim-1/page.md",
+        "children": []
+      },
+      {
+        "slug": "claims-2-4",
+        "title": "Claims 2-4",
+        "file": "pages/claims-2-4/page.md",
+        "children": []
+      },
+      {
+        "slug": "claims-5-6",
+        "title": "Claims 5-6",
+        "file": "pages/claims-5-6/page.md",
+        "children": []
+      },
+      {
+        "slug": "conclusion",
+        "title": "Conclusion",
+        "file": "pages/conclusion/page.md",
+        "children": []
+      },
+      {
+        "slug": "tests",
+        "title": "Tests",
+        "file": "pages/tests/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 653,
+  "revision": "1784605655375559825"
+}

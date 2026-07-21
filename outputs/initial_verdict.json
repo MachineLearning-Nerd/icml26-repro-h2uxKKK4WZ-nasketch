@@ -1,0 +1,30 @@
+{
+  "claim_1": {
+    "status": "in_progress",
+    "note": "full scaling sweep pending"
+  },
+  "claim_2": {
+    "status": "in_progress",
+    "note": "Monte Carlo CLT pending"
+  },
+  "claim_3": {
+    "status": "in_progress",
+    "note": "online covariance protocol pending"
+  },
+  "claim_4": {
+    "status": "in_progress",
+    "note": "outer convergence protocol pending"
+  },
+  "claim_5": {
+    "status": "pass",
+    "spectral_cells": 220011,
+    "max_recurrence_error": 7.027711745877241e-14,
+    "max_radius_excess": 1.1102230246251565e-16
+  },
+  "claim_6": {
+    "status": "pass",
+    "exact_newton_error": 0.0,
+    "unaccelerated_identity_error": 0.0,
+    "lyapunov_special_case_error": 0.0
+  }
+}

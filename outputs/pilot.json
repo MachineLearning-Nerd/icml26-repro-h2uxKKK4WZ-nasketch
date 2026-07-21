@@ -1,0 +1,37 @@
+{
+  "protocol": {
+    "d": 20,
+    "covariance": "Toeplitz r=.4",
+    "tau": 5,
+    "sketch": "Kaczmarz",
+    "runs": 12,
+    "horizon": 200,
+    "stepsize": "(t+1)^-.501"
+  },
+  "parameters": {
+    "alpha": 0.01799943786491889,
+    "beta": 0.9816706440312171,
+    "gamma": 2.72786452972792,
+    "mu": 0.006719305804607226,
+    "nu": 20.00000000000007
+  },
+  "operator_samples": 200,
+  "checkpoints": {
+    "50": {
+      "scaled_covariance_relative_error": 9836.48304766201,
+      "online_estimator_relative_error": 1840.4000306421642,
+      "mean_distance": 61.376793088646366
+    },
+    "100": {
+      "scaled_covariance_relative_error": 10059.034063210865,
+      "online_estimator_relative_error": 3174.1416480225694,
+      "mean_distance": 56.274408477060724
+    },
+    "200": {
+      "scaled_covariance_relative_error": 9516.163571987328,
+      "online_estimator_relative_error": 3419.3080451743213,
+      "mean_distance": 42.46823069611689
+    }
+  },
+  "covariance_estimator_log_slope": 0.44684250766345845
+}

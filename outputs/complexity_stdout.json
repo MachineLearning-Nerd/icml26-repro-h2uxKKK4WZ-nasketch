@@ -1,0 +1,37 @@
+{
+  "rows": [
+    {
+      "d": 32,
+      "inner_seconds": 6.108800880610943e-05,
+      "solve_seconds": 1.7189537174999714e-05,
+      "inner_operation_bound": 2241
+    },
+    {
+      "d": 64,
+      "inner_seconds": 7.121532689779997e-05,
+      "solve_seconds": 4.12545632570982e-05,
+      "inner_operation_bound": 8577
+    },
+    {
+      "d": 128,
+      "inner_seconds": 0.00012088799849152565,
+      "solve_seconds": 0.09701564384158701,
+      "inner_operation_bound": 33537
+    },
+    {
+      "d": 256,
+      "inner_seconds": 0.00029462308157235384,
+      "solve_seconds": 0.0005251220427453518,
+      "inner_operation_bound": 132609
+    },
+    {
+      "d": 512,
+      "inner_seconds": 0.0010545679833739996,
+      "solve_seconds": 0.005645298399031162,
+      "inner_operation_bound": 527361
+    }
+  ],
+  "inner_runtime_slope": 1.0267848936819493,
+  "dense_solve_runtime_slope": 2.0388777802523874,
+  "claim": "For s=1, Algorithm 1 requires two dense matrix-vector products and no dense matrix-matrix product: O(d^2) time and O(d^2) storage for B."
+}
