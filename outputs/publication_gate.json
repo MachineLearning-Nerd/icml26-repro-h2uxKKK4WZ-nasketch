@@ -1,0 +1,15 @@
+{
+  "paper": "h2uxKKK4WZ",
+  "tests_passed": true,
+  "publication_gate_passed": true,
+  "claim_count": 6,
+  "claim_points": 12,
+  "scope": "Clean-room theorem-instance reproduction of all six anchored claims; the unavailable source experiment parameter-approximation routine and its failed literal pilot are disclosed in docs/EVIDENCE.md.",
+  "evidence": [
+    "outputs/local_gate.json",
+    "outputs/theorem_audits.json",
+    "outputs/initial_verdict.json",
+    "outputs/complexity.json",
+    "repro/tests/test_nasketch.py"
+  ]
+}
