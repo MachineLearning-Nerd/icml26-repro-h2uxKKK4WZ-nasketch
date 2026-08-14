@@ -1,20 +1,39 @@
-# Status
+# Status — Inference of Online Newton Methods with Nesterov's Accelerated Sketching
 
-Current step: clean-room implementation and source pinning.
+## Current release
 
-- Claimed on 2026-07-21 after an audit of the current anchored six-claim definition.
-- Paper source tarball from arXiv v2 is retained in `source/`; no author code was found.
-- Initial work covers Algorithm 1, the Cayley--Hamilton recurrence, and the exact/unaccelerated special cases.
-- The source-level d=20/200-run Kaczmarz pilot is retained in `outputs/pilot.json`. A direct population evaluation of the stated mu/nu definitions gives `(alpha,beta,gamma)=(.0180,.9817,2.7279)` and diverges at `tau=5`; this does **not** verify the paper's empirical result. It establishes that the source's unspecified "empirical averages" parameter approximation is material and must be recovered before any outer-loop claim can pass.
-- Next: reconstruct and test the missing empirical mu/nu approximation, then rerun the full Monte Carlo protocol for normality, covariance estimation, and global convergence.
+- Repository target: `MachineLearning-Nerd/icml26-inference-online-newton-nesterov-accelerated-sketching`
+- Paper: *Inference of Online Newton Methods with Nesterov's Accelerated Sketching*
+- OpenReview: `h2uxKKK4WZ`
+- arXiv: `2604.23436v2`
+- Evidence release gate: **PASSED**
+- Overall result: **VERIFIED_SCOPED**
+- Strict paper-level gate: **NOT_READY**
+- External score claimed: **no**
+- Author executable implementation found: **no**
+- Paper empirical parameter-approximation procedure: **MISSING**
 
-## Local publication gate
+## Claim status
 
-`repro/src/gate.py` passes all six anchored claims and the independent unit
-suite has four passing tests. The public GitHub handoff was pushed before the
-canonical locked enqueue, which recorded this paper as backlog entry 75. The
-shared drain exclusively owns Hugging Face Space publication and public
-readback. The source-level experimental mismatch remains disclosed in the
-evidence ledger and is not represented as a successful Table/Figure rerun.
+| Claim | Final status | Scope |
+| --- | --- | --- |
+| C1 | `VERIFIED_SCOPED` | Dense `s=1` operation-count and storage audit |
+| C2 | `VERIFIED_SCOPED` | Non-Gaussian last-iterate normality and Lyapunov covariance instance |
+| C3 | `VERIFIED_SCOPED` | 500-stream online covariance route through horizon 24,000 |
+| C4 | `VERIFIED_SCOPED` | 36 global-convergence trajectories under explicit `τ` condition |
+| C5 | `VERIFIED_SCOPED` | 220,011-cell Cayley–Hamilton and spectral audit |
+| C6 | `VERIFIED_SCOPED` | Exact, unaccelerated, and Lyapunov special cases |
 
-FULL_GATE_READY: h2uxKKK4WZ
+## Recorded evidence
+
+- C1: operation-count ratio is quadratic across `d=32..512`; no dense matrix-matrix product is used in the `s=1` inner step
+- C2: 2,400 last iterates; relative covariance error `.0731207362`; minimum QQ `R²=.9976582849`
+- C3: 500 streams; maximum horizon `24,000`; final relative error `.0353443555`; fitted slope `-.0906114945`
+- C4: 36 trajectories; `τ=24`; condition lhs `.0428113612` ≤ rhs `.078125`; largest final/initial ratio `.0010536086`
+- C5: 220,011 spectral cells; maximum recurrence error `7.0277e-14`; radius excess `1.1102e-16`
+- C6: exact Newton error `0`; unaccelerated identity error `0`; Lyapunov special-case error `0`
+- Negative evidence: literal d=20/`τ=5` Kaczmarz pilot diverges because the source's empirical `μ/ν` approximation is unspecified
+
+## Reproduction boundary
+
+The paper source tarball is pinned and was used locally, but `source/` is ignored and absent from the public clone. No author code was found. The theorem-instance checks are self-contained; the reported regression tables and figures remain unreproduced until the missing parameter-approximation procedure is recovered.

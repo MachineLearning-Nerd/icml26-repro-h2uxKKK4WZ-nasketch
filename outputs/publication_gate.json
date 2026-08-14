@@ -1,15 +1,52 @@
 {
-  "paper": "h2uxKKK4WZ",
-  "tests_passed": true,
-  "publication_gate_passed": true,
-  "claim_count": 6,
-  "claim_points": 12,
-  "scope": "Clean-room theorem-instance reproduction of all six anchored claims; the unavailable source experiment parameter-approximation routine and its failed literal pilot are disclosed in docs/EVIDENCE.md.",
-  "evidence": [
-    "outputs/local_gate.json",
-    "outputs/theorem_audits.json",
-    "outputs/initial_verdict.json",
-    "outputs/complexity.json",
-    "repro/tests/test_nasketch.py"
-  ]
+  "schema_version": 2,
+  "paper": {
+    "openreview_id": "h2uxKKK4WZ",
+    "title": "Inference of Online Newton Methods with Nesterov's Accelerated Sketching",
+    "arxiv": "2604.23436v2"
+  },
+  "repository": {
+    "owner": "MachineLearning-Nerd",
+    "original_name": "icml26-repro-h2uxKKK4WZ-nasketch",
+    "target_name": "icml26-inference-online-newton-nesterov-accelerated-sketching",
+    "default_branch": "main"
+  },
+  "evidence_release_gate": "PASSED",
+  "overall_status": "VERIFIED_SCOPED",
+  "strict_paper_gate": "NOT_READY",
+  "recorded_local_tests_passed": true,
+  "substantive_claims": 6,
+  "claims_verified_scoped": 6,
+  "claims_falsified": 0,
+  "claims_blocked": 0,
+  "outcomes": {
+    "VERIFIED_SCOPED": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+    ],
+    "FALSIFIED": [],
+    "BLOCKED": []
+  },
+  "claim_results": {
+    "C1": "VERIFIED_SCOPED_COMPLEXITY",
+    "C2": "VERIFIED_SCOPED_ASYMPTOTIC_NORMALITY",
+    "C3": "VERIFIED_SCOPED_ONLINE_COVARIANCE",
+    "C4": "VERIFIED_SCOPED_GLOBAL_CONVERGENCE",
+    "C5": "VERIFIED_SCOPED_CAYLEY_HAMILTON",
+    "C6": "VERIFIED_SCOPED_SPECIAL_CASES"
+  },
+  "empirical_protocol": {
+    "status": "NOT_READY_MISSING_PARAMETER_APPROXIMATION",
+    "failed_literal_pilot": "outputs/pilot.json",
+    "table_figure_reproduction_claimed": false
+  },
+  "publication": {
+    "status": "PUBLIC_GITHUB_HANDOFF_ONLY",
+    "external_score_claimed": false
+  },
+  "scope": "All six theorem-instance contracts pass. The paper's d=20/40 regression table and figure protocol remains unreproduced because the empirical parameter approximation is not released; the literal pilot is retained as negative evidence."
 }
